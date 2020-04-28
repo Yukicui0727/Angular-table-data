@@ -1,6 +1,9 @@
 import { MyserviceService } from './myservice.service';
-import {Component, ViewChild} from '@angular/core';
- 
+import {Component, OnInit, ViewChild} from '@angular/core';
+import { MaterialModule } from './../material/material.module';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
    selector: 'app-root',
@@ -25,7 +28,7 @@ export class AppComponent {
    total: number = MyserviceService.length//total quantity
    totalpages = this.total / this.pageSize;///total quantity
 
-   //check previous Page
+   /* //check previous Page
    previousPage(){
       this.page--;
       this.changePage(this.page);  
@@ -52,3 +55,4 @@ export class AppComponent {
  }
 }
 
+ */
